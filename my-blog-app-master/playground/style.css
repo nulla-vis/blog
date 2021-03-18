@@ -1,0 +1,22 @@
+#parent {
+    background-color: blue;
+    height: 300px;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+#child1{
+    background-color: red;
+    height: 30px;
+}
+
+#child2{
+    background-color: yellow;
+    height: 30px;
+}
+
+#child3{
+    background-color:aqua;
+    height: 30px;
+}

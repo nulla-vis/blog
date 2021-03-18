@@ -1,0 +1,180 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.post-link {
+    text-decoration: none;
+}
+
+header {
+    min-height: 350px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    position: relative; /* so the child also position based on parent by default relative is to body, even if its header*/
+}
+ header > * { /* > = within , * = all */
+    z-index: 10;
+}
+
+.home-page header, .new-post-page header{  /* do this so it ionly targer header in HOME PAGE ONLY */
+    background-image: url(/assets/banner.jpeg);
+}
+
+header::after { /*child to header*/
+    content: "";
+     position: absolute;
+     top: 0;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     background-color: rgba(0, 0, 0, 0.7)
+}
+
+.profile-image{
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 50%;
+    background-image: url(/assets/9FBC4530-861F-4570-8C0F-8097D9B4BBC6.jpg);
+    background-size: cover;
+    background-position:70% 30%;
+}
+.align {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-name, .title {
+    font-size: 3em;
+    font-weight: bold;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.subtext {
+    margin-top: 8px;
+ 
+}
+
+.main {
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+}
+
+.main-container {
+    max-width: 750px;
+    min-width: 600px;
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+
+.post {
+    display: flex;
+    border: 1px solid #eaecee; /* Width and type */
+    border-radius: 8px;
+    min-height: 200px;
+    overflow: hidden; 
+    margin-top:24px ;
+    
+}
+
+.post:hover {
+    box-shadow: 0 2rem 5rem 0 rgba(0, 0, 0,.1);
+    transform: translate3d(0,-5px,0);
+    transition: all 0.25s ease;
+}
+
+.post-image {
+    flex-basis: 40%;
+    /* background-image: url(/assets/ilya-pavlov-OqtafYT5kTw-unsplash.jpg);   dont need anymore cuz we got the image from API*/
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.post-content {
+    flex-basis: 60%;
+    padding: 24px;
+}
+
+.post-date {
+    font-size : 12px;
+    color:  #adb5bd;
+    font-weight: 600;  /* ketebalan */
+}
+
+.post-title {
+    margin-top: 16px;
+    font-size: 1.5em;
+    color: #333;
+    font-weight: 600;
+}
+
+.post-title h4 {
+    margin: 0;
+}
+
+.post-text {
+    margin-top: 4px;
+    color: #495057;
+    font-weight: 400;
+    /* font-size: 1em; */
+    line-height: 1.4;
+    max-height: 65px;
+    overflow: hidden;
+}
+
+footer {
+    min-height: 100px;
+    background-color: #eaecee70;
+    color: #929eaa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+.nav-button.new-post-button {
+   position: fixed; /*so the position based on page same pos even scrolling*/
+   bottom: 30px;
+   right: 30px;
+   font-size: 24px;
+   width: 50px;
+   height: 50px;
+   background-color: #004186;
+   color: white;
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26);
+   transition: all 0.25s ease;
+}
+
+.nav-button.new-post-button:hover {
+    background-color: #002349;
+}
+
+.navigation a{
+    text-decoration: none;
+    color: #004186;
+    font-size: 17px;
+    background-color: white;
+    border: 1px solid #004186; /* Width and type */
+    border-radius: 5px;
+    padding: 5px 8px;
+}
+
+a.post-link {
+ text-decoration: none;
+}
